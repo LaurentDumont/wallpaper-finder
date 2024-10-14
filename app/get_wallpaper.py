@@ -1,8 +1,12 @@
-import requests
-from bs4 import BeautifulSoup
+"""Get the wallpapers!"""
 import os
 
+import requests
+from bs4 import BeautifulSoup
+
+
 def get_wallpaper():
+    """Get the wallpapers!"""
     url = "https://wallhaven.cc/search?categories=100&purity=100&atleast=3440x1440&topRange=1y&sorting=toplist&order=desc&ai_art_filter=1&page=3"
     response = requests.get(url, timeout=20)
 
@@ -22,7 +26,7 @@ def get_wallpaper():
                     else:
                         extension = 'jpg'
                     wallpaper_url = f"https://w.wallhaven.cc/full/{wallpaper_id[:2]}/wallhaven-{wallpaper_id}.{extension}"
-                    print(f"Downloading {wallpaper_url}") # noqa: T201
+                    print(f"Downloading {wallpaper_url}")
 
                     image_response = requests.get(wallpaper_url, timeout=20)
                     if image_response.status_code == 200:

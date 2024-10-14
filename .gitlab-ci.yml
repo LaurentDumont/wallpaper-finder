@@ -9,6 +9,7 @@ ruff:
   stage: testing
   script:
     - pip install -r app/ci-requirements.txt
+    - ruff check --verbose
   tags:
     - home
 
@@ -16,6 +17,7 @@ black:
   stage: testing
   script:
     - pip install -r app/ci-requirements.txt
+    - black --diff app/get_wallpaper.py
   tags:
     - home
 
@@ -23,6 +25,7 @@ mypy:
   stage: testing
   script:
     - pip install -r app/ci-requirements.txt
+    - mypy app/get_wallpaper.py
   tags:
     - home
 
@@ -30,5 +33,6 @@ bandit:
   stage: testing
   script:
     - pip install -r app/ci-requirements.txt
+    - bandit -r app/get_wallpaper.py --verbose
   tags:
     - home

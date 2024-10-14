@@ -1,30 +1,34 @@
+default:
+  image: python:3.13.0-bookworm
+
+
 stages:
   - testing
 
 ruff:
   stage: testing
   script:
-    - echo "Running ruff"
+    - pip install -r app/ci-requirements.txt
   tags:
     - home
 
 black:
   stage: testing
   script:
-    - echo "Running black"
+    - pip install -r app/ci-requirements.txt
   tags:
     - home
 
 mypy:
   stage: testing
   script:
-    - echo "mypy"
+    - pip install -r app/ci-requirements.txt
   tags:
     - home
 
 bandit:
   stage: testing
   script:
-    - echo "Running bandit"
+    - pip install -r app/ci-requirements.txt
   tags:
     - home

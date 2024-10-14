@@ -11,3 +11,17 @@ black:
     - echo "Running black"
   tags:
     - home
+
+mypy:
+  stage: testing
+  script:
+    - echo "mypy"
+  tags:
+    - home
+
+bandit:
+  stage: testing
+  script:
+    - echo "Running bandit"
+  tags:
+    - home

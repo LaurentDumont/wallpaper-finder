@@ -1,0 +1,13 @@
+ruff:
+  stage: testing
+  script:
+    - echo "Running ruff"
+  tags:
+    - home
+
+black:
+  stage: testing
+  script:
+    - echo "Running black"
+  tags:
+    - home

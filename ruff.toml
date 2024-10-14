@@ -10,6 +10,9 @@ lint.ignore = ["D1", "D401", "D413", "PTH123", "RUF001"]
 # F401 - Strips unused imports. Quite annoying when your file editor runs the fix command on every save.
 # F841 - Strips unused variables. Same excuse as for F401.
 # PIE804 - Replaces kwargs with actual arguments. Annoying when working with pydantic and wanting to test the kwargs interface.
-lint.unfixable = ["F401", "F841", "PIE804"]
+lint.unfixable = ["F401", "F841", "PIE804", "T201"]
  
 lint.pydocstyle = {convention = "google"}
+
+# Allow lines to be as long as 120.
+line-length = 120

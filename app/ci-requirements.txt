@@ -1,0 +1,7 @@
+bandit
+ruff
+mypy
+mypy-extensions
+black
+types-requests
+types-beautifulsoup4

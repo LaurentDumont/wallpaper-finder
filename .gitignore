@@ -1,2 +1,4 @@
-.venv
+venv*
 .idea
+wallpapers*
+.ruff_cache

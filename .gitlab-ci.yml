@@ -33,6 +33,6 @@ bandit:
   stage: testing
   script:
     - pip install -r app/ci-requirements.txt
-    - bandit -r app/get_wallpaper.py --verbose
+    - bandit -c bandit.yaml -r app/
   tags:
     - home
